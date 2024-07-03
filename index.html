@@ -18,6 +18,7 @@
         <nav>
             <a href="index.html"><img src="images/logo.jpg" alt="logo" width="75px" height="75px"></a>
             <div class="nav-links">
+                <img onclick="hidemenu()" class="icon" width="26" height="26" src="https://img.icons8.com/metro/26/delete-sign.png" alt="delete-sign" />
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -26,14 +27,30 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <img id="navLinks" onclick="showmenu()" class="icon" width="24" height="24" src="https://img.icons8.com/material-outlined/24/menu--v1.png" alt="menu--v1" />
         </nav>
 
         <div class="text-box">
             <h1>World's Biggest University</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloribus totam quos alias suscipit<br> aliquam quisquam nihil? Dolore, pariatur quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloribus totam quos alias
+                suscipit<br> aliquam quisquam nihil? Dolore, pariatur quidem.</p>
             <a href="" class="hero-btn">Visit Us To Know More</a>
         </div>
     </section>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showmenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hidemenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
 </body>
 
 </html>
